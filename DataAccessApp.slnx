@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DataAccessDB/DataAccessDB.sqlproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
