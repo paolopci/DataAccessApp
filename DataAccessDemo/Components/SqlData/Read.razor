@@ -1,0 +1,59 @@
+@* Imposta la modalità di rendering interattivo lato server per questo componente *@
+@rendermode InteractiveServer
+@* Inietta il servizio IPeopleData per l'accesso ai dati *@
+@inject IPeopleData sql
+
+<h3 class="mb-3">Read People</h3>
+@* Controlla se la lista delle persone è stata caricata *@
+@if (people != null)
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* Itera attraverso la collezione di persone e crea una riga per ciascuna *@
+            @foreach (var person in people)
+            {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.FirstName</td>
+                    <td>@person.LastName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    @* Mostra un messaggio di caricamento mentre i dati vengono recuperati *@
+    <p>Loading...</p>
+}
+<div>
+    @* Bottone per ricaricare manualmente i dati *@
+    <button class="btn btn-outline-primary my-3" @onclick="RefreshData" type="button">Refresh Data</button>
+</div>
+
+@code {
+    // Variabile per memorizzare la lista delle persone recuperate dal database
+    private IEnumerable<PersonModel>? people = new List<PersonModel>();
+
+    // Metodo del ciclo di vita che viene eseguito quando il componente viene inizializzato
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshData();
+    }
+
+    // Metodo asincrono per recuperare i dati dal servizio
+    private async Task RefreshData()
+    {
+        // Imposta people a null per mostrare il messaggio di caricamento
+        people = null;
+        // Chiama il servizio per ottenere tutte le persone
+        people = await sql.GetAllPeople();
+    }
+}

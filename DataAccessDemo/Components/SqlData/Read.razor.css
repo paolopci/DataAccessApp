@@ -1,0 +1,10 @@
+table.table-hover {
+    --bs-table-hover-bg: yellow;
+    --bs-table-hover-color: red;
+}
+
+table.table-hover tbody tr:hover {
+    background-color: yellow !important;
+    color: red !important;
+    font-weight: bold;
+}
