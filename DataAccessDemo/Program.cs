@@ -1,4 +1,5 @@
 using DataAccessDemo.Components;
+using DataAccessLibrary.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

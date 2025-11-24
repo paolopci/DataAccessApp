@@ -1,0 +1,12 @@
+﻿  Individuazione dei progetti da ripristinare...
+  Tutti i progetti sono aggiornati per il ripristino.
+  DataAccessLibrary -> D:\test\Blazor\DataAccessApp\DataAccessLibrary\bin\Debug\net8.0\DataAccessLibrary.dll
+D:\test\Blazor\DataAccessApp\DataAccessDemo\Components\SqlData\Create.razor(26,13): error CS0246: Il nome di tipo o di spazio dei nomi 'PeopleModel' non ├¿ stato trovato. Probabilmente manca una direttiva using o un riferimento all'assembly. [D:\test\Blazor\DataAccessApp\DataAccessDemo\DataAccessDemo.csproj]
+
+Compilazione NON RIUSCITA.
+
+D:\test\Blazor\DataAccessApp\DataAccessDemo\Components\SqlData\Create.razor(26,13): error CS0246: Il nome di tipo o di spazio dei nomi 'PeopleModel' non ├¿ stato trovato. Probabilmente manca una direttiva using o un riferimento all'assembly. [D:\test\Blazor\DataAccessApp\DataAccessDemo\DataAccessDemo.csproj]
+    Avvisi: 0
+    Errori: 1
+
+Tempo trascorso 00:00:02.47

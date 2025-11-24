@@ -4,6 +4,7 @@ This solution contains a Data Access Layer application with a SQL Server Databas
 ## Project Structure
 - **DataAccessDB**: SQL Server Database Project (.sqlproj) containing table definitions and stored procedures.
 - **DataAccessLibrary**: C# Class Library (.csproj) containing data access logic.
+- **DataAccessDemo**: Blazor Web App (.csproj) for demonstrating data access functionality.
 
 # Repository Guidelines
 
