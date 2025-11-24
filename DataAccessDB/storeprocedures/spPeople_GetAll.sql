@@ -2,4 +2,8 @@
 AS
 
 begin
+select 
+	[Id],
+	[GivenName],
+	[LastName] from [dbo].[People];
 end

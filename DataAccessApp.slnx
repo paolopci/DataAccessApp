@@ -1,6 +1,7 @@
 <Solution>
-  <Project Path="DataAccessDB/DataAccessDB.sqlproj">
+  <Project Path="DataAccessDB/DataAccessDB.sqlproj" Id="4db3abaf-40ea-4ac8-8622-3adc48541b6b">
     <Build />
     <Deploy />
   </Project>
+  <Project Path="DataAccessLibrary/DataAccessLibrary.csproj" Id="3c016e01-444e-4a70-99b7-dcac5b06dc57" />
 </Solution>
