@@ -3,5 +3,6 @@
     <Build />
     <Deploy />
   </Project>
+  <Project Path="DataAccessDemo/DataAccessDemo.csproj" Id="07459fac-3f22-4829-b887-ec25b26b2e29" />
   <Project Path="DataAccessLibrary/DataAccessLibrary.csproj" Id="3c016e01-444e-4a70-99b7-dcac5b06dc57" />
 </Solution>
