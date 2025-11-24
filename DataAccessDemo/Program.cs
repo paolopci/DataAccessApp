@@ -1,3 +1,4 @@
+using DataAccessDemo;
 using DataAccessDemo.Components;
 using DataAccessLibrary.Data;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddSingleton<IPeopleData, PeopleData>();
+builder.Services.AddScoped<SelectedPersonState>();
 
 var app = builder.Build();
 
