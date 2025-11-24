@@ -1,0 +1,11 @@
+using DataAccessLibrary.Models;
+
+namespace DataAccessLibrary.Data;
+
+public interface IPeopleData
+{
+    Task<IEnumerable<PersonModel>> GetAllPeople();
+    Task UpdatePerson(PersonModel person);
+    Task InsertPerson(PersonModel person);
+    Task DeletePerson(int id);
+}
