@@ -1,0 +1,57 @@
+@page "/VirtualList"
+@rendermode InteractiveServer
+
+<h3>Virtual List</h3>
+
+@* @foreach (var item in people)
+{
+<p style="font-size: 26px">
+@item.FirstName @item.LastName
+</p>
+
+} *@
+
+@* <Virtualize Items="people" Context="item">
+<ItemContent>
+<p style="font-size: 26px">
+@item.FirstName @item.LastName
+</p>
+</ItemContent>
+<EmptyContent>
+<p>No Elements Found</p>
+</EmptyContent>
+</Virtualize> *@
+
+<table class="table table-striped table-hover" style="font-size: 26px; ">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in people)
+        {
+            <Virtualize Items="people" Context="item" SpacerElement="tr" OverscanCount="3">
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                </tr>
+            </Virtualize>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<PersonModel> people = new List<PersonModel>();
+
+    protected override void OnInitialized()
+    {
+        for (int i = 0; i < 500; i++)
+        {
+            people.Add(new PersonModel { Id = i, FirstName = $"First {i}", LastName = $"Last {i}" });
+        }
+    }
+}
