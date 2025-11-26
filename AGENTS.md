@@ -1,10 +1,22 @@
 # Project Overview
+
 This solution contains a Data Access Layer application with a SQL Server Database project and a C# Data Access Library.
 
 ## Project Structure
+
 - **DataAccessDB**: SQL Server Database Project (.sqlproj) containing table definitions and stored procedures.
 - **DataAccessLibrary**: C# Class Library (.csproj) containing data access logic.
 - **DataAccessDemo**: Blazor Web App (.csproj) for demonstrating data access functionality.
+
+## Configurazione MCP
+
+Per usare gli strumenti MCP nel workspace:
+
+- `filesystem`: aggiunto in `.vscode/mcp.json`, usa `mcp-server-filesystem` con root `/mnt/d/test/Blazor/DataAccessApp`.
+- `mssql-local`: punta al DB `DataAccessDb` su `localhost:1433` con utente `sa` e password `Micene@65`.
+- `mongo`: connesso a `mongodb://localhost:27017/NomeMongoDbDelProgetto`.
+
+Avviare/riavviare i server da VS Code con il comando “MCP: Reload Servers”.
 
 # Repository Guidelines
 

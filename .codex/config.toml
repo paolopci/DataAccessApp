@@ -1,0 +1,12 @@
+[mcp_servers.sql-local]
+command = "mssql-mcp-server"
+args = [
+  "--server", "${SQLSERVER_HOST}",
+  "--port", "${SQLSERVER_PORT}",
+  "--user", "${SQLSERVER_USER}",
+  "--password", "${SQLSERVER_PASSWORD}",
+  "--database", "${SQLSERVER_DB}"
+]
+
+[mcp_servers.sql-local.env]
+MSSQL_SSL = "false"
